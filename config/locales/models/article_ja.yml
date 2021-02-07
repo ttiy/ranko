@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    models:
+      article: '投稿'
+    attributes:
+      article:
+        body: '内容'
+        emotion: '気持ち'

@@ -1,0 +1,70 @@
+ja:
+  date:
+    formats:
+      ja_ymd: ! '%Y年%m月%d日'
+      ja_md: ! '%m月%d日'
+      ja_ym: ! '%Y年%m月'
+      hyphen: ! '%Y-%m-%d'
+      wday: '(%a)'
+  time:
+    formats:
+      ja_ymdhm: ! '%Y年%m月%d日 %H時%M分'
+      hm: ! '%H:%M'
+      ymdhm: ! '%Y/%m/%d %H:%M'
+      mdhm: ! '%m/%d %H:%M'
+      dot_ymd: ! '%Y.%m.%d'
+  helpers:
+    link:
+      index: '一覧'
+      show: '詳細'
+      new: '新規登録'
+      edit: '編集'
+      delete: '削除'
+      add: '追加'
+      reset: 'リセット'
+      cancel: 'キャンセル'
+      close: '閉じる'
+      apply_project: '新規依頼作成'
+      undo: '元に戻す'
+      trashes: 'ゴミ箱'
+      export: 'エクスポート'
+    submit:
+      login: 'ログイン'
+      search: '検索'
+      send: '送信'
+      request: '申請する'
+      change: '変更する'
+      confirm: '入力内容を確認する'
+      close: '校了'
+      post: '投稿する'
+      fix: '確定する'
+      change_agent_mode: '代理店ログイン'
+      change_normal_mode: '代理店ログイン解除'
+    placeholder:
+      email: 'メールアドレス'
+      password: 'パスワード'
+      password_confirmation: 'パスワード(確認)'
+      current_password: '現在のパスワード'
+  messages:
+    created: '登録しました。'
+    updated: '更新しました。'
+    deleted: '削除しました。'
+    added:   '追加しました。'
+    changed_mode: 'モードを変更しました。'
+    confirm: '本当に削除してよろしいですか？'
+    status_confirm: '本当にステータスを変更してもよろしいですか？'
+    apply_project: 'この案件を依頼してもよろしいですか？'
+    done: '本当に校了してよろしいですか？'
+    lock: '本当に凍結してよろしいですか？このクライアントのユーザーはログインできなくなります。'
+    unlock: '本当に凍結を解除してよろしいですか？このクライアントのユーザーはログインできるようになります。'
+    locked: 'クライアントを凍結しました。'
+    unlocked: 'クライアントの凍結を解除しました。'
+    client_locked: 'このアカウントは凍結されています。'
+    undid: '元に戻しました。'
+    accept: '本当に承認してよろしいですか？'
+  number:
+    human:
+      storage_units:
+        units:
+          kb: KB
+          mb: MB

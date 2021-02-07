@@ -1,0 +1,22 @@
+<%= error_messages f.object %>
+
+<div class="field">
+  <%= f.label :body %>
+  <%= f.text_area :body, class: 'form-control', rows: 10 %>
+</div>
+<blockquote class="blockquote">
+  <p>
+    今日はなにがありましたか？<br />
+    ゆっくり思い返してみましょう
+  </p>
+</blockquote>
+<div class="field">
+  <%= f.label :emotion %>
+  <%= f.text_field :emotion, class: 'form-control' %>
+</div>
+<blockquote class="blockquote">
+  <p>
+    今日の日記が書けましたか？<br />
+    気持ちを一文で表してみましょう
+  </p>
+</blockquote>

@@ -1,0 +1,22 @@
+/*
+*= require_self
+*= require_tree .
+*/
+// @import "bootstrap-sprockets";
+@import "bootstrap";
+
+.wrapper {
+  // font-family: '游ゴシック';
+  font-family: "Hannari";
+}
+.actions {
+  float: right;
+  background: transparent;
+  margin-top: 0px;
+  margin-bottom: 0;
+  font-size: 12px;
+  padding: 20px 0px 0px;
+  top: 15px;
+  right: 10px;
+  border-radius: 2px;
+}
