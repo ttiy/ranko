@@ -22,4 +22,9 @@ Rails.application.routes.draw do
   resources :tops, only: :index
   resources :articles, only: [:new, :create, :destroy]
   resources :my_pages, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  namespace :api, {format: 'json'} do
+    namespace :v1 do
+      resources :articles, only: [:index, :show]
+    end
+  end
 end
