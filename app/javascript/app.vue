@@ -1,25 +1,26 @@
 <template>
   <div id="app">
-    <table>
-      <tbody>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <tr>
-                <th>ID</th>
-                <th>name</th>
-                <th>birth</th>
-              </tr>
-              <tr v-for="a in articles" :key="a.id">
-                <td>{{ a.id }}</td>
-                <td>{{ a.body }}</td>
-                <td>{{ a.emotion }}</td>
-              </tr>
+    <div class="container">
+      <h1>Hello</h1>
+      <div class="content-wrapper">
+        <section class="content-header">
+        </section>
+        <section class="content-body">
+          <div class="box-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <div v-for="a in articles" :key="a.id">
+                  <div class="item shadow p-3 mb-5 bg-white rounded">
+                    {{ a.body }}
+                    {{ a.emotion }}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </tbody>
-    </table>
+        </section>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,6 +42,10 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/earlyaccess/hannari.css');
+#app {
+  font-family: 'Hannari';
+}
 p {
   font-size: 2em;
   text-align: center;
