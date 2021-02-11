@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :my_pages, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   namespace :api, {format: 'json'} do
     namespace :v1 do
-      resources :articles, only: [:index, :show]
+      resources :articles, only: [:index, :show, :create]
     end
   end
 end

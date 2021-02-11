@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    container_name: app
+    build: .
+    tty: true
+    stdin_open: true
+    networks: [overlay]
+    ports: ['3000:3000']
+    depends_on: [db]
+    environment:
+      DATABASE_HOST: 'db'
+    volumes:
+      - '.:/app'
+      - 'bundle:/usr/local/bundle'
+      - 'node_modules:/app/node_modules'
+  db:
+    container_name: db
+    image: mysql:5.7
+    networks: [overlay]
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - 'db:/var/lib/mysql'
+networks:
+  overlay:
+volumes:
+  db:
+  bundle:
+  node_modules:
