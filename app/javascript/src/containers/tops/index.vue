@@ -1,8 +1,21 @@
 <template>
-  <div>
-    <div v-for="(article, i) in articles" :key="article.id">
-      <p>{{ article.body }}</p>
-    </div>
+  <div class="content-wrapper">
+    <section class="content-header">
+    </section>
+    <section class="content-body">
+      <div class="box-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div v-for="(article, i) in articles" :key="article.id">
+              <div class="item shadow p-3 mb-5 bg-white rounded">
+                <p>{{ article.body }}</p>
+                <p>{{ article.emotion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 

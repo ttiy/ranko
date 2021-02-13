@@ -7,7 +7,7 @@ class Api::V1::ArticlesController < ApiController
   end
 
   def index
-    articles = Article.all
+    articles = Article.all.order(id: "DESC")
     render json: articles
   end
 
