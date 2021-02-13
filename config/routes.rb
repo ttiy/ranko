@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get 'my_pages/index'
-  get 'my_pages/show'
-  get 'my_pages/new'
-  get 'my_pages/create'
-  get 'my_pages/edit'
-  get 'my_pages/update'
-  get 'my_pages/destroy'
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
@@ -20,11 +13,12 @@ Rails.application.routes.draw do
 
   root 'tops#index'
   resources :tops, only: :index
-  resources :articles, only: [:new, :create, :destroy]
-  resources :my_pages, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :articles, only: [:new, :create]
+  resources :my_pages, only: :index
   namespace :api, {format: 'json'} do
     namespace :v1 do
       resources :articles, only: [:index, :show, :create]
+      resources :my_pages, only: [:index, :destroy]
     end
   end
 end

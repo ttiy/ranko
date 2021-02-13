@@ -40,6 +40,7 @@ import ArticlesAPI from "@/api/articles_api"
 export default {
   components: { },
   props: {
+    userId: { type: String, required: true },
   },
   data() {
     return {
@@ -51,8 +52,9 @@ export default {
     submit() {
       // FIXME: user_idのハードコーディング
       // FIXME: 投稿した後の挙動(成功・失敗時)
-      ArticlesAPI.create({body: this.body, emotion: this.emotion, user_id: 1}).then((response) => {
+      ArticlesAPI.create({body: this.body, emotion: this.emotion, user_id: this.userId}).then((response) => {
         console.log(response)
+        window.location.href = window.location.origin + '/my_pages'
       })
       .catch((error) => {
         console.error(error)

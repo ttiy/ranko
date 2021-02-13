@@ -1,26 +1,4 @@
-<h1><%= @str%></h1>
-<div class="content-wrapper">
-  <% if @articles.present? %>
-    <section class="content-header">
-    </section>
-    <section class="content-body">
-      <div class="box-body">
-        <div class="row">
-          <div class="col-sm-12">
-            <% @articles.each do |article| %>
-              <div class="item shadow p-3 mb-5 bg-white rounded">
-                <%= markdown(article.body) %>
-                <%= markdown(article.emotion) %>
-                <div class="actions">
-                  <%= link_to t('helpers.link.delete'), article_path(article), method: :delete, class: 'btn btn-sm btn-light', data: { confirm: '本当に削除しても良いですか？' } %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </section>
-  <% else %>
-    投稿してみよう！
-  <% end %>
-</div>
+
+<%= javascript_pack_tag [controller_name, action_name].join("/") %>
+
+<main id="main-content"></main>
